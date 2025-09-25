@@ -1,0 +1,236 @@
+Program 1:
+class First 
+{
+    public static void main(String[] args) 
+	{
+        System.out.println("Hello World");
+    }
+}
+
+OUTPUT:
+Hello World
+
+
+		
+Program 2:
+class SimpleCalculator
+{
+	public static void main(String srg[])
+	{
+	int a = 50;
+	int b = 50;
+	System.out.println(a + b);
+	System.out.println(a - b);
+	System.out.println(a * b);
+	System.out.println(a / b);
+	}
+}
+
+OUTPUT:
+100
+0
+2500
+1
+
+
+	
+Program 3:
+class Fibonacci
+{
+	public static void main ( String arg[])
+	{
+		int a = 0;
+		int b = 1;
+		for (int i = 1; i <= 10; i++) 
+		{
+            System.out.print(a + " ");
+            int nextTerm = a + b;
+            a = b;
+            b = nextTerm;
+		}
+	}
+}
+
+OUTPUT:
+0 1 1 2 3 5 8 13 21 34
+
+
+
+Program 4:
+class SimpleInterest
+{
+	public static void main(String arg[])
+	{
+	int A = 10000;
+	int R = 5;
+	int T = 3;
+	int S = (A*R*T)/100;
+	System.out.println("Simple Interest is " + (S)); 
+	}
+}
+
+OUTPUT:
+Simple Interest is 1500
+
+
+
+Program 5:
+class Multiplication
+{
+    public static void main(String[] args)
+    {
+        int a = 3;
+		int b = 5;
+        for (int i = 1; i <= 10; i++)
+        {
+            System.out.println("3 * " + i + " = " + (a * i));
+        }
+		for (int x = 1; x <= 10; x++)
+        {
+            System.out.println("5 * " + x + " = " + (b * x));
+        }
+    }
+}
+
+OUTPUT:
+3 * 1 = 3
+3 * 2 = 6
+3 * 3 = 9
+3 * 4 = 12
+3 * 5 = 15
+3 * 6 = 18
+3 * 7 = 21
+3 * 8 = 24
+3 * 9 = 27
+3 * 10 = 30
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+
+
+
+Program 6;
+class Factorial
+{
+	public static void main(String arg[])
+	{
+		int a = 10;
+		long f = 1;
+		for (int i = 1; i < a ; i++)
+		{
+			f*=i;
+		}
+		System.out.println(a +"! = "+f);
+	}
+}
+
+OUTPUT:
+10! = 362880
+
+
+
+Program 7:
+class Box
+{
+	double l;
+	double b;
+	double h;
+Box(double lenght,double breath, double height)
+{
+	l = lenght;
+	b = breath;
+	h = height;
+}
+double vol()
+{
+	double volume=l*b*h;
+	return volume;
+
+}
+}
+class Demo
+{
+	public static void main(String arg[])
+	{
+	Box b1 = new Box(5,10,15);
+	Box b2 = new Box(12,12,12);
+	System.out.println( "Volume of Box 1 =" + b1.vol());
+	System.out.println("Volume of Box 2 =" + b2.vol());
+	}
+}
+
+OUTPUT:
+Volume of Box 1 = 750.0
+Volume of Box 2 = 1728.0
+
+
+
+Program 8:
+import java.util.Scanner;
+class Quad 
+{
+	int a,b,c;
+	void input()
+	{Scanner sc=new Scanner(System.in);
+		System.out.println("Enter coefficients");
+				a=sc.nextInt();
+				b=sc.nextInt();
+				c=sc.nextInt();
+	}
+	void calcRoots()
+	{
+		double d = (b*b) - (4.0*a*c);
+		
+		if (d==0.0)
+		{
+			double r = -b/(2.0*a);
+			System.out.println ( "Roots are equal to " + r);
+		}
+		
+		else if (d>0.0)
+		{
+			double r1 = (-b +(Math.sqrt(d))/(2.0*a));
+            double r2 = (-b -(Math.sqrt(d))/(2.0*a));
+			System.out.println("R1 is equal to " + r1);
+			System.out.println("R2 is equal to " + r2);
+		}
+		
+		else if (d<0.0)
+		{
+			double real= -b/(2.0*a);
+			double imag = Math.sqrt(-d)/(2.0*a);
+			System.out.println("R1 is equal to " + real +"+ i"+imag);
+			System.out.println("R2 is equal to " + real +"- i"+imag);
+		}
+	}
+}
+public class QuadRun
+{
+	public static void main(String[] args)
+	{
+		Quad a = new Quad();
+		a.input();
+		a.calcRoots();
+	}
+}
+
+OUTPUT:
+Enter Your Coefficients 
+1
+6
+9
+Roots are equal to -3.0
+
+		
+			
+			
+			
+		
+	
